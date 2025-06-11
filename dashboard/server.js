@@ -3,6 +3,7 @@ import { Server } from "socket.io";
 import http from "http";
 import express from "express";
 import path from "path";
+import { fileURLToPath } from "url";
 
 export class MyServer {
   constructor(port) {
@@ -17,8 +18,12 @@ export class MyServer {
 
   serveDashboard() {
     this.app.get("/", (req, res) => {
-      const dashboardPath = new URL("./multi_dashboard.html", import.meta.url)
-        .pathname;
+    //   const dashboardPath = new URL("./multi_dashboard.html", import.meta.url)
+    //     .pathname;
+      const __filename = fileURLToPath(import.meta.url);
+      const __dirname = path.dirname(__filename);
+      const dashboardPath = path.join(__dirname, "multi_dashboard.html");
+
       const decodedPath = decodeURIComponent(dashboardPath);
       const normalizedPath = path.normalize(decodedPath);
       console.log(normalizedPath);

@@ -62,7 +62,7 @@
           "lightgrey",
           "MediumSeaGreen",
           "black",
-          "white",
+          "lightblue",
         ];
         let ridercolor = [
           "lightblue",
@@ -70,7 +70,7 @@
           "grey",
           "darkgreen",
           "darkgrey",
-          "white",
+          "blue",
         ];
 
         // MAP TABLE ---------------------------------------------------------------------------------------
@@ -94,10 +94,13 @@
             let color = "black";
             switch (tiles[y][j]["type"]) {
               case "W":
-                color = "green";
+                color = "white";
                 break;
               case "D":
                 color = "red";
+                break;
+              case "S":
+                color = "green";
                 break;
             }
 

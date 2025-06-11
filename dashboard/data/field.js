@@ -17,16 +17,26 @@ export class Field {
     for (let i = 0; i < height; i++) {
       this.field[i] = [];
       for (let j = 0; j < width; j++) {
-        let found = false;
-        let delivery = false;
+        let walkable = false; // if the tile is walkable
+        let delivery = false; // if the tile is a delivery tile
+        let spawnable = false; // if the tile can have parcels spawned on it
         for (const t of tiles) {
           if (t.x == j && t.y == i) {
-            found = true;
-            delivery = t.delivery;
+            if (t.type == 1) {
+              walkable = true;
+              spawnable = true;
+            }
+            if (t.type == 2) {
+              walkable = true;
+              delivery = true;
+            }
+            if (t.type == 3) {
+              walkable = true;
+            }
             break;
           }
         }
-        this.field[i][j] = { x: j, y: i, delivery: delivery, walkable: found };
+        this.field[i][j] = { x: j, y: i, delivery: delivery, walkable: walkable, spawnable: spawnable };
       }
     }
   }
@@ -48,6 +58,9 @@ export class Field {
         }
         if (this.field[i][j].delivery) {
           cell["type"] = "D";
+        }
+        if (this.field[i][j].spawnable) {
+          cell["type"] = "S";
         }
         tiles[i][j] = cell;
       }
