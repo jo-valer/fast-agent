@@ -11,17 +11,6 @@ Authors: [**Giovanni Valer**](https://github.com/jo-valer) and [**Daniele Della 
 ## Project Structure
 
 ```
-1_single_agent/
-├── BeliefRevision.js     # Belief revision and sensing logic
-├── config.js             # Client configuration (host, token)
-├── fast_utils.js         # Utility functions (distance, map stats, etc.)
-├── FASTconfig.js         # Configuration parameters for the agent behavior
-├── main.js               # Entry point: agent setup and main loop
-├── Planner.js            # Intention and plan classes
-├── search_deamon.js      # Pathfinding daemon (A*)
-```
-
-```
 FAST
 ├── 1_single_agent
 │   ├── BeliefRevision.js     # Belief revision and sensing logic
@@ -52,8 +41,8 @@ FAST
 │   ├── multi_dashboard.html
 │   ├── riders.js
 │   └── server.js
-├── package.json             # Project dependencies and scripts
-├── package-lock.json        # Lock file for dependencies
+├── package.json
+├── package-lock.json
 └── README.md
 ```
 
