@@ -65,14 +65,12 @@ FAST
 
 ### Running in Single-Agent Scenario
 ```bash
-cd 1_single_agent
-node main.js
+npm run single-agent
 ```
 
 ### Running in Team Scenario
 ```bash
-cd 2_team
-node start.js
+npm run team
 ```
 
 You can choose to run the team scenario with **PDDL**. To do so, you need to set `PDDL` to `true` in `2_team/FASTconfig.js`. This will enable the PDDL planner for team coordination.
