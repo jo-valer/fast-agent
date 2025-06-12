@@ -46,9 +46,8 @@ FAST
 └── README.md
 ```
 
-## Getting Started
 
-### Installation
+## Installation
 
 1. Clone this repository:
    ```bash
@@ -62,6 +61,9 @@ FAST
    ```
 
 3. If you want, you can change the client configuration in `1_single_agent/config.js` and `2_team/config.js` (host, token, etc.).
+
+
+## Usage
 
 ### 🤖 Running in Single-Agent Scenario
 ```bash
