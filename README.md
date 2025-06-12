@@ -61,7 +61,7 @@ FAST
    npm install
    ```
 
-3. If you want, you can change the client configuration in `1_single_agent/config.js` and `2_team/config.js` (host and token).
+3. If you want, you can change the client configuration in `1_single_agent/config.js` and `2_team/config.js` (host, token, etc.).
 
 ### 🤖 Running in Single-Agent Scenario
 ```bash
@@ -73,4 +73,4 @@ npm run single-agent
 npm run team
 ```
 
-You can choose to run the team scenario with **PDDL**. To do so, you need to set `PDDL` to `true` in `2_team/FASTconfig.js`, then run exactly as before.
+You can choose to run the team scenario with **PDDL**. To do so, you need to set `USE_PDDL` to `true` in `2_team/FASTconfig.js`, then run exactly as before.
