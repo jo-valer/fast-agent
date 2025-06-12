@@ -1,5 +1,3 @@
-export const NUM_AGENTS = 1;
-export const DELIVEROO_DASHBOARD = true;
 export const MAX_INT = 1000000; // Maximum integer value to use in the game (for example, for scores)
 
 // STATS

@@ -1,5 +1,3 @@
-// FASTv0 BeliefRevision.js
-
 import { manhattanDistance, findNearestDelivery, computeMapStats, getIslands } from "./fast_utils.js";
 
 

@@ -1,5 +1,3 @@
-// FASTv0 main.js
-
 import { DeliverooApi } from "@unitn-asa/deliveroo-js-client";
 import { EventEmitter } from "events";
 import { DemoDashboard } from "../dashboard/dashboard.js";

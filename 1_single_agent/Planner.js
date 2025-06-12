@@ -1,5 +1,3 @@
-// FASTv0 Planner.js
-
 import { ActionType } from "../dashboard/data/action.js";
 import { findNearestDelivery, manhattanDistance } from "./fast_utils.js";
 import { DELIVERY_TILE_SEARCH_FUNCTION } from "./FASTconfig.js";

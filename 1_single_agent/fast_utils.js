@@ -1,5 +1,3 @@
-// FASTv0 fast_utils.js
-
 import { aStarSearch } from "./main.js";
 import { TUNNEL_MIN_LENGTH, MAX_INT } from "./FASTconfig.js";
 
