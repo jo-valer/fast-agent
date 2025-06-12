@@ -1,5 +1,6 @@
 import { spawn } from 'child_process';
 import { default as config } from "./config.js";
+const usePddl = process.argv.includes('pddl');
 
 const master = { id: config.master.id, role: 'master', token: config.master.token, dashboard_port: config.master.dashboard_port };
 
@@ -19,7 +20,8 @@ function spawnProcesses( me, teamMate ) {
         token="${me.token}" \
         buddyId="${teamMate.id}" \
         role="${me.role}" \
-        port="${me.dashboard_port}" `,
+        port="${me.dashboard_port}" \
+        ${usePddl ? 'pddl' : ''} `,
         { shell: true }
     );
 

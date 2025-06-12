@@ -151,6 +151,7 @@ const fastAgent = {
     MOVEMENT_DURATION: () => deliverooConfig.MOVEMENT_DURATION,
     PARCEL_DECADING_INTERVAL: () => deliverooConfig.PARCEL_DECADING_INTERVAL,
     PARCELS_OBSERVATION_DISTANCE: () => deliverooConfig.PARCELS_OBSERVATION_DISTANCE,
+    usePddl: args['pddl'] || false,
 };
 
 // Instantiate the dashboard.

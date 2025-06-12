@@ -73,4 +73,8 @@ npm run single-agent
 npm run team
 ```
 
-You can choose to run the team scenario with **PDDL**. To do so, you need to set `USE_PDDL` to `true` in `2_team/FASTconfig.js`, then run exactly as before.
+### 📅 Enabling PDDL for Team Scenario
+If you want to run the team scenario with PDDL, you can add the `pddl` flag:
+```bash
+npm run team -- pddl
+```

@@ -1,7 +1,7 @@
 import { ActionType } from "../dashboard/data/action.js";
 import { Heatmap, shareParcelWithBuddy } from "./BeliefRevision.js"
 import { findNearestDelivery, manhattanDistance } from "./fast_utils.js";
-import { DELIVERY_TILE_SEARCH_FUNCTION, USE_PDDL } from "./FASTconfig.js";
+import { DELIVERY_TILE_SEARCH_FUNCTION } from "./FASTconfig.js";
 import fs from "fs/promises";
 import { spawn } from "child_process";
 import path from "path";
@@ -673,7 +673,7 @@ export class SearchFunctionMove extends Plan {
         // Compute path via A* search over the map graph
         // let path = this.agent.searchFunction({ x: this.agent.me.x, y: this.agent.me.y }, { x: tx, y: ty }, closeAgents);
 
-        if(USE_PDDL && planName && planName === "patrolling" && !this.agent.mapStats.spawnableArea && !this.agent.mapStats.onlySpawnable) {
+        if(this.agent.usePddl && planName && planName === "patrolling" && !this.agent.mapStats.spawnableArea && !this.agent.mapStats.onlySpawnable) {
             path = await onlineSolverPatrol( this.agent.me.id, Math.round(this.agent.me.x), Math.round(this.agent.me.y), tx, ty, this.agent.myIslandMap.tiles, this.reachableSpawn,this.agent.tilesHeatmap, closeAgents);
         }
         else {
